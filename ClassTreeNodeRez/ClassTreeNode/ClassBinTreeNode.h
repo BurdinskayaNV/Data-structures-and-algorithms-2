@@ -289,8 +289,8 @@ public:
 	// Добавление узла (простой пример)
 	// через queue в языке програмирования C++, добавление, удаление и изменение элементов очереди,
 	// получение первого и последнее элементов, функции push и pop. 
-	// Класс std::queue<T> представляет очередь - контейнер, который работает по принципу FIFO
-    // (first-in first-out или "первый вошел — первым вышел") — первым всегда извлекается первый добавленный элемент.
+	// Класс queue<T> представляет очередь - контейнер, который работает по принципу FIFO
+        // (first-in first-out или "первый вошел — первым вышел") — первым всегда извлекается первый добавленный элемент.
 	template <typename T>
     void insertNode(const T& value) {
         auto newNode = make_shared<TreeNode<T>>(value);
@@ -319,7 +319,7 @@ public:
     };
 
     // Обход в ширину
-	template <typename T>
+    template <typename T>
     void breadthFirstTraversal() const {
         if (!root) return;
         queue<shared_ptr<TreeNode<T>>> queue;
@@ -414,11 +414,11 @@ public:
 	void testBinaryTree3() {
         BinaryTree<int> tree;
         // Вставляем 5 узлов
-		tree.insert(1);
-        tree.insert(2);
-        tree.insert(3);
-        tree.insert(4);
-        tree.insert(5);
+	tree.insertNode(1);
+        tree.insertNode(2);
+        tree.insertNode(3);
+        tree.insertNode(4);
+        tree.insertNode(5);
 
         cout << "Обход в ширину (далее): ";
         tree.breadthFirstTraversal(); // Ожидаемый вывод: 1 2 3 4 5
