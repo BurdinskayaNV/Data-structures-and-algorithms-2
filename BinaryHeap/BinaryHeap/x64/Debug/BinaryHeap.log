@@ -1,0 +1,17 @@
+﻿  BinaryHeap.cpp
+C:\Users\Наташа\Desktop\BinaryHeap\ModBinaryHeap.h(54,31): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "BinaryHeap.cpp")
+      C:\Users\Наташа\Desktop\BinaryHeap\ModBinaryHeap.h(54,31):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\Наташа\Desktop\BinaryHeap\ModBinaryHeap.h(82,21):
+          выполняется компиляция ссылки на экземпляр класс шаблон функции "BinaryHeap<int,std::less<int>>"
+          C:\Users\Наташа\Desktop\BinaryHeap\ModBinaryHeap.h(52,10):
+          во время компиляции функции-члена класс шаблон "void BinaryHeap<int,std::less<int>>::insert(const T &)"
+          with
+          [
+              T=int
+          ]
+              C:\Users\Наташа\Desktop\BinaryHeap\ModBinaryHeap.h(83,19):
+              см. первую ссылку на "BinaryHeap<int,std::less<int>>::insert" в "testHeap"
+  
+  BinaryHeap.vcxproj -> C:\Users\Наташа\Desktop\BinaryHeap\x64\Debug\BinaryHeap.exe
