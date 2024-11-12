@@ -1,0 +1,35 @@
+/// Бурдинская Наталья ВМК-22
+/// Date - 03.09.2024
+#pragma once
+#include <iostream> /// объявляет cin cout
+#include <memory>   /// умные указатели и функции shared_ptr make_shared
+#include <cassert>  /// для assert
+#include <queue>    /// класс queue представляет очередь 
+#include <functional>  /// набор шаблонов классов для работы с функциональными объектами
+#include <vector>   /// шаблоны вектора
+#include <stack>    /// Stack имеет три основные операции: push, pop, а также peek.
+#include <locale>   /// определяет функцию setlocale для установки русской локали
+#include <algorithm> /// содержит набор функций для выполнения алгоритмических
+                     /// операций над контейнерами и над другими последовательностями
+#include <sstream>  /// для организации работы со строками через интерфейс потоков 
+using namespace std;
+
+/// Класс TreeNode : Шаблонный класс, представляющий узел бинарного дерева.
+/// Каждый узел содержит значение и указатели на левого и правого потомков.
+template<typename T>
+class TreeNode {
+public:
+    T value;
+    /// shared_ptr умные указатели
+    /// использоваться, когда ресурс памяти должен быть разделяемым
+    /// (имеется в виду, что когда на одну и ту же область памяти может
+    /// указывать несколько указателей именно shared_ptr типа <TreeNode<T>>).
+    shared_ptr<TreeNode<T>> left;
+    shared_ptr<TreeNode<T>> right;
+
+    /// Конструктор без параметров
+    TreeNode() { left = nullptr; right = nullptr; }
+    /// Конструктор с параметром, где val значение узла
+    TreeNode(T val) : value(val), left(nullptr), right(nullptr) {}
+};
+
