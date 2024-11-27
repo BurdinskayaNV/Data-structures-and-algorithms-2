@@ -1,0 +1,5 @@
+﻿  AVLTreeNode.cpp
+C:\Users\Наташа\Desktop\AVLTreeNode\BinarySearchTree.h(714,13): warning C4002: слишком много аргументов для вызова макроса, подобного функции, "assert"
+  (компиляция исходного файла "AVLTreeNode.cpp")
+  
+  AVLTreeNode.vcxproj -> C:\Users\Наташа\Desktop\AVLTreeNode\x64\Debug\AVLTreeNode.exe
