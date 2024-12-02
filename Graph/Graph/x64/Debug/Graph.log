@@ -1,0 +1,76 @@
+﻿  Graph.cpp
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(400,14): warning C4129: "/": нераспознанная escape-последовательность символов
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(401,14): warning C4129: "/": нераспознанная escape-последовательность символов
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(448,41): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  (компиляция исходного файла "Graph.cpp")
+      C:\Users\Наташа\Desktop\Graph\GraphModul.h(448,41):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\Наташа\Desktop\Graph\GraphModul.h(22,7):
+          при компиляции шаблона класса "Graph"
+          C:\Users\Наташа\Desktop\Graph\GraphModul.h(428,20):
+          выполняется компиляция ссылки на экземпляр класс шаблон функции "Graph<std::string>"
+          C:\Users\Наташа\Desktop\Graph\GraphModul.h(426,15):
+          во время компиляции функции-члена класс шаблон "void Graph<std::string>::testGraph(void)"
+              C:\Users\Наташа\Desktop\Graph\Graph.cpp(11,29):
+              см. первую ссылку на Graph<std::string>::testGraph "main"
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(454,37): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(437,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(444,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(451,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(459,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(466,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(473,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(488,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(512,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(518,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(524,33): warning C4101: e: неиспользованная локальная переменная
+  (компиляция исходного файла "Graph.cpp")
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(169,56): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "Graph.cpp")
+      C:\Users\Наташа\Desktop\Graph\GraphModul.h(169,56):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\Наташа\Desktop\Graph\GraphModul.h(169,7):
+          во время компиляции функции-члена класс шаблон "int Graph<std::string>::NumberOfVertices(void) const"
+              C:\Users\Наташа\Desktop\Graph\Graph.cpp(35,75):
+              см. первую ссылку на Graph<std::string>::NumberOfVertices "main"
+  
+C:\Users\Наташа\Desktop\Graph\GraphModul.h(70,17): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "Graph.cpp")
+      C:\Users\Наташа\Desktop\Graph\GraphModul.h(70,17):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Users\Наташа\Desktop\Graph\GraphModul.h(66,8):
+          во время компиляции функции-члена класс шаблон "void Graph<std::string>::InsertVertex(const T &)"
+          with
+          [
+              T=std::string
+          ]
+              C:\Users\Наташа\Desktop\Graph\Graph.cpp(20,19):
+              см. первую ссылку на Graph<std::string>::InsertVertex "main"
+  
+  Graph.vcxproj -> C:\Users\Наташа\Desktop\Graph\x64\Debug\Graph.exe
