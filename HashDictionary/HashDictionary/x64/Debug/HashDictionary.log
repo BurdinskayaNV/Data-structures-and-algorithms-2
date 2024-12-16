@@ -1,0 +1,6 @@
+﻿  HashDictionary.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
+C:\Users\Наташа\Desktop\HashDictionary\HashDictionary.h(170,33): warning C4101: error: неиспользованная локальная переменная
+  (компиляция исходного файла "HashDictionary.cpp")
+  
+  HashDictionary.vcxproj -> C:\Users\Наташа\Desktop\HashDictionary\x64\Debug\HashDictionary.exe
