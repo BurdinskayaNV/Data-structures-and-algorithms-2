@@ -1,0 +1,87 @@
+/// LawZipf.cpp
+/// Бурдинская Наталья ВМК-22
+/// Date - 15.12.2024
+#pragma once
+#include <iostream>
+#include <fstream>
+#include <unordered_map>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <iomanip>
+#include <locale>
+using namespace std;
+
+//Функция для предобработки слов: приведение к нижнему регистру
+string preprocessWord(const string& word) {
+    string result;
+    for (char c : word) {
+        if (isalpha(c)) { result += tolower(c); }
+    }
+    return result;
+}
+
+int main() {
+    //Установка локали для поддержки русских символов
+    setlocale(LC_ALL, "russian");
+
+    //Открываем файл с именем Zipf_file.txt.
+    ifstream file("Zipf_file.txt");
+    if (!file.is_open()) {
+        cerr << "Не удается открыть файл." << endl;
+        return 1; 
+    }
+
+    //Создаем словарь для хранения частоты слов
+    unordered_map<string, size_t> wordFrequency;
+
+    string word;
+    while (file >> word) {
+        //Придание слову нижнего регистра и удаление ненужных символов.
+        word = preprocessWord(word);
+        //Если слово не пустое, увеличиваем его частоту.
+        if (!word.empty()) {
+            ++wordFrequency[word];
+        }
+    }
+
+    //Перенос данных из карты в вектор для сортировки по частоте.
+    vector<pair<string, size_t>> wordFreqVec(wordFrequency.begin(), wordFrequency.end());
+
+    //Сортируем пары (слово, частота) по убыванию частоты.
+    sort(wordFreqVec.begin(), wordFreqVec.end(),
+        [](const auto& a, const auto& b) {
+            return a.second > b.second;
+        });
+
+    //Выводим топ N слов, например, 10.
+    size_t N = 10;
+    cout << "Топ " << N << " слов : " << endl;
+    for (size_t i = 0; i < N && i < wordFreqVec.size(); ++i) {
+        cout << wordFreqVec[i].first << " : " << wordFreqVec[i].second << endl;
+    }
+
+    //Создаем и открываем файл для записи логарифмических данных.
+    ofstream logFile("log_data.txt");
+    if (!logFile.is_open()) {
+        cerr << "Не удается открыть файл для записи логарифмических данных." << endl;
+        return 1;
+    }
+
+    //Записываем логарифмические значение ранга и частоты в файл.
+    logFile << fixed << setprecision(6);
+    for (size_t rank = 1; rank <= wordFreqVec.size(); ++rank) {
+        double logRank = log(rank);
+        double logFreq = log(wordFreqVec[rank - 1].second);
+        logFile << logRank << " " << logFreq << endl;
+    }
+
+    //Закрываем файл.
+    logFile.close();
+
+    //Сообщаем о завершении данных операций.
+    cout << "График может быть построен по данным из файла log_data.txt, используя библиотеки визуализации." << endl;
+
+    return 0;
+}
